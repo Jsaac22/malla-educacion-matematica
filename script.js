@@ -1,35 +1,36 @@
 document.addEventListener("DOMContentLoaded", () => {
   const cursos = document.querySelectorAll(".curso");
 
-  // Inicializar: deshabilitar los cursos con requisitos
-  cursos.forEach((curso) => {
-    const prereqs = curso.dataset.prereqs;
-    if (prereqs) {
-      curso.classList.add("disabled");
-      curso.disabled = true;
-    }
-  });
-
-  // Al hacer clic en un curso
   cursos.forEach((curso) => {
     curso.addEventListener("click", () => {
-      if (curso.classList.contains("disabled")) return;
+      // Si está bloqueado, no se puede hacer nada
+      if (curso.classList.contains("bloqueado")) return;
 
+      // Marcar como aprobado visualmente
       curso.classList.toggle("aprobado");
 
-      const cursoId = curso.dataset.id;
+      // Revisar si al aprobar este curso, se pueden desbloquear otros
+      const id = curso.dataset.id;
 
-      // Recorre todos los cursos y revisa si pueden desbloquearse
-      cursos.forEach((c) => {
-        const prereqs = c.dataset.prereqs?.split(",");
-        if (prereqs && prereqs.includes(cursoId)) {
-          const todosAprobados = prereqs.every((id) =>
-            document.querySelector([data-id="${id}"])?.classList.contains("aprobado")
-          );
-          if (todosAprobados) {
-            c.classList.remove("disabled");
-            c.disabled = false;
-          }
+      cursos.forEach((otroCurso) => {
+        // Si ya está aprobado, saltarse
+        if (otroCurso.classList.contains("aprobado")) return;
+
+        // Obtener requisitos
+        const prereqs = otroCurso.dataset.prereqs;
+        if (!prereqs) return;
+
+        const requisitos = prereqs.split(",");
+
+        // Verificar si TODOS los requisitos están aprobados
+        const cumplidos = requisitos.every((req) => {
+          const cursoRequisito = document.querySelector([data-id="${req}"]);
+          return cursoRequisito && cursoRequisito.classList.contains("aprobado");
+        });
+
+        // Si ya se cumplen los requisitos, desbloquear
+        if (cumplidos) {
+          otroCurso.classList.remove("bloqueado");
         }
       });
     });
