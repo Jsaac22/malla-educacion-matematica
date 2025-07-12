@@ -1,3 +1,4 @@
+console.log("el script está siendo ejecutado");
 document.addEventListener("DOMContentLoaded", () => {
   const cursos = document.querySelectorAll(".curso");
 
@@ -27,5 +28,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-  console.log("Script cargado");
-});
+
