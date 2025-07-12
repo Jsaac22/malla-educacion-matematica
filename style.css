@@ -1,0 +1,38 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  color: #222;
+}
+
+.malla-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.curso {
+  background-color: #e0e0e0;
+  border: 2px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.curso.tachado {
+  background-color: #a8e6a1;
+  text-decoration: line-through;
+  color: #333;
+}
+
+.curso.bloqueado {
+  background-color: #ddd;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
