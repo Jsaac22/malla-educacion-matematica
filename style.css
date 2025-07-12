@@ -1,38 +1,54 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: sans-serif;
+  margin: 0;
   padding: 20px;
-  background-color: #f7f7f7;
+  background-color: #f8f9fa;
 }
 
 h1 {
-  color: #222;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.malla-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.malla {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.semestre {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-width: 150px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.semestre h2 {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .curso {
-  background-color: #e0e0e0;
-  border: 2px solid #333;
-  border-radius: 6px;
-  padding: 10px;
-  width: 200px;
-  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 6px;
+  background-color: #e9ecef;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s;
 }
 
-.curso.tachado {
-  background-color: #a8e6a1;
-  text-decoration: line-through;
-  color: #333;
-}
-
-.curso.bloqueado {
-  background-color: #ddd;
-  opacity: 0.6;
+.curso.disabled {
+  background-color: #dee2e6;
   cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.curso.aprobado {
+  text-decoration: line-through;
+  background-color: #b2f2bb;
 }
