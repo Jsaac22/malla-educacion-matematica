@@ -12,21 +12,93 @@
     
     <div class="semestre">
       <h2>Semestre I</h2>
-      <button class="curso" data-id="EG-I">EG-I</button>
-      <button class="curso" data-id="EF-">EF-</button>
-      <button class="curso" data-id="MA-0002">MA-0002</button>
-      <button class="curso" data-id="MA-0003">MA-0003</button>
-      <button class="curso" data-id="MA-0018">MA-0018</button>
+      <button class="curso" data-id="EG-I">Curso Integrado de Humanidades I</button>
+      <button class="curso" data-id="EF-">Actividad Deportiva</button>
+      <button class="curso" data-id="MA-0002">Álgebra Elemental</button>
+      <button class="curso" data-id="MA-0003">Fundamentos de la Matemática</button>
+      <button class="curso" data-id="MA-0018">Tecnología en el Aula de la Matemática I</button>
     </div>
 
     <div class="semestre">
       <h2>Semestre II</h2>
-      <button class="curso bloqueado" data-id="EG-II" data-prereqs="EG-I">EG-II</button>
-      <button class="curso bloqueado" data-id="MA-0004" data-prereqs="MA-0002,MA-0003">MA-0004</button>
-      <button class="curso bloqueado" data-id="MA-005" data-prereqs="MA-0002,MA-0003">MA-005</button>
-      <button class="curso bloqueado" data-id="MA-0006" data-prereqs="MA-0002,MA-0003">MA-0006</button>
+      <button class="curso bloqueado" data-id="EG-II" data-prereqs="EG-I">Curso Integrado de Humanidades II</button>
+      <button class="curso bloqueado" data-id="MA-0004" data-prereqs="MA-0002,MA-0003">Didáctica de la Matemática I</button>
+      <button class="curso bloqueado" data-id="MA-0005" data-prereqs="MA-0002,MA-0003">Introducción a las Funciones</button>
+      <button class="curso bloqueado" data-id="MA-0006" data-prereqs="MA-0002,MA-0003">Conjuntos Numéricos</button>
     </div>
 
+      <div class="semestre">
+      <h2>Semestre III</h2>
+      <button class="curso bloqueado" data-id="MA-0007" data-prereqs="MA-0018,MA-0004">Matemáticas en el Curriculum Escolar</button>
+      <button class="curso bloqueado" data-id="MA-0008" data-prereqs="MA-0018,MA-0005">Geometría Euclidiana I</button>
+      <button class="curso bloqueado" data-id="MA-0009" data-prereqs="MA-0005,MA-0006">Números Reales</button>
+      <button class="curso bloqueado" data-id="PS1081" data-prereqs="MA-0004">Cognición y Matemática</button>
+      <button class="curso bloqueado" data-id="SR-I" data-prereqs="EG-II">Seminario de Realidad Nacional</button>
+    </div>
+
+      <div class="semestre">
+      <h2>Semestre IV</h2>
+      <button class="curso bloqueado" data-id="MA-0010" data-prereqs="MA-0007">Didáctica de la Álgebra</button>
+      <button class="curso bloqueado" data-id="MA-0011" data-prereqs="MA-0007">Evaluación de los Aprendizajes Matemáticos</button>
+      <button class="curso bloqueado" data-id="MA-0012" data-prereqs="MA-0009">Funciones Derivables</button>
+      <button class="curso bloqueado" data-id="MA-0013" data-prereqs="MA-0008">Geometría Euclidiana II</button>
+      <button class="curso bloqueado" data-id="PS-1082" dara-prereqs="PS-1081">Psicología del Desarrollo Humano para Educación Matemática</button>
+    </div>
+
+     <div class="semestre">
+      <h2>Semestre V</h2>
+      <button class="curso bloqueado" data-id="RP-" data-prereqs="EG-II">Repertorio</button>
+      <button class="curso bloqueado" data-id="MA-0014" data-prereqs="MA-0007, MA-0008">Didáctica de la Geometría</button>
+      <button class="curso bloqueado" data-id="MA-0015" data-prereqs="MA-0006">Álgebra Lineal</button>
+      <button class="curso bloqueado" data-id="MA-0016" data-prereqs="MA-0002, MA-0003">Estadística y Probabilidad</button>
+      <button class="curso bloqueado" data-id="PS-1080" dara-prereqs="MA-0010">Métodos y Diseños de Investigación</button>
+    </div>
+
+     <div class="semestre">
+      <h2>Semestre IV</h2>
+      <button class="curso" data-id="OP-1107">Bloque Optativo de Idioma</button>
+      <button class="curso" data-id="HA-0117">Historia de la Educación Costarricense</button>
+      <button class="curso bloqueado" data-id="MA-0017" data-prereqs="MA-0012,MA-0010,MA-0014">Didáctica de las Funciones</button>
+      <button class="curso bloqueado" data-id="MA-0036" data-prereqs="MA-0005, MA-0014">Tecnología en el Aula de la Matemática II</button>
+      <button class="curso bloqueado" data-id="MA-0019" dara-prereqs="MA-0012">Funciones Riemann Integrables</button>
+    </div>
+
+     <div class="semestre">
+      <h2>Semestre VI</h2>
+      <button class="curso" data-id="EG-">Curso de Arte</button>
+      <button class="curso bloqueado" data-id="MA-0020" data-prereqs="MA-0017,PS-1080">Didáctica de la Matemática II</button>
+      <button class="curso bloqueado" data-id="MA-0021" data-prereqs="MA-0017, PS-1080">Comunicación Matemática</button>
+      <button class="curso bloqueado" data-id="MA-0022" data-prereqs="MA-0008">Geometría Analítica</button>
+      <button class="curso bloqueado" data-id="MA-0023" dara-prereqs="PS-1081">Estadística y Probabilidad II</button>
+    </div>
+
+     <div class="semestre">
+      <h2>Semestre VII</h2>
+      <button class="curso" data-id="F-2002">Filosofía de la Matemática</button>
+      <button class="curso bloqueado" data-id="MA-0024" data-prereqs="MA-0020, MA-0023">Didáctica de la Estadística y Probabilidad</button>
+      <button class="curso bloqueado" data-id="MA-0025" data-prereqs="MA-0009,MA-0020">Teoría de Números</button>
+      <button class="curso bloqueado" data-id="MA-0032" data-prereqs="MA-0015,MA-0019">Funciones en Varias Variables</button>
+      <button class="curso bloqueado" data-id="SR-II" dara-prereqs="SR-I">Seminario de Realidad Nacional II</button>
+    </div>
+
+     <div class="semestre">
+      <h2>Semestre VI</h2>
+      <button class="curso bloqueado" data-id="MA-0026" data-prereqs="MA-0025">Didáctica de los Números</button>
+      <button class="curso bloqueado" data-id="MA-0027" data-prereqs="MA-0020.F-2002">Investigación en Educación Matemática I</button>
+      <button class="curso bloqueado" data-id="MA-0028" data-prereqs="MA-0015,MA-0025">Estructuras Algebraicas</button>
+      <button class="curso bloqueado" data-id="MA-0030" data-prereqs="MA-0032">Ecuaciones Diferenciales</button>
+    </div>
+
+     <div class="semestre">
+      <h2>Semestre II</h2>
+      <button class="curso bloqueado" data-id="MA-0033" data-prereqs="MA-0026">Seminario de Educación Matemática</button>
+      <button class="curso bloqueado" data-id="MA-0031" data-prereqs="MA-0027">Investigación en Educación Matemática II</button>
+      <button class="curso bloqueado" data-id="MA-0029" data-prereqs="MA-0030">Métodos Numéricos</button>
+      <button class="curso bloqueado" data-id="MA-0035" data-prereqs="MA-0032">Topología Básica</button>
+    </div>
+
+    
+    
   </div>
 </body>
 </html>
