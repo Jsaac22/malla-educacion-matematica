@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const prerequisitos = otroCurso.dataset.prereqs.split(",");
 
         const todosCumplidos = prerequisitos.every(reqId => {
-          const cursoReq = document.querySelector([data-id="${reqId}"]);
+          const cursoReq = document.querySelector(`[data-id="${reqId}"]`);
           return cursoReq && cursoReq.classList.contains("aprobado");
         });
 
